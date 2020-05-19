@@ -1,0 +1,280 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: display;
+    src: url('font_display.ttf');
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+
+/*Corpo do site*/
+
+body {
+    height: 1px;
+    background-image: radial-gradient(#DDD, #6282db80);
+}
+
+header {
+    height: 60px;
+    width: 100%;
+    background-color: #6666;
+    position: absolute;
+    top: 0;
+}
+
+header h1 {
+    font-family: Arial;
+    color: #EEE;
+    font-size: 45px;
+    text-shadow: 4px 4px 4px #000;
+    text-align: center;
+    margin-top: 4px;
+}
+
+footer {
+    height: 60px;
+    width: 100%;
+    background-color: #6666;
+    position: absolute;
+    bottom: 0;
+}
+
+footer div#data {
+    font-size: 45px;
+    color: #EEE;
+    line-height: 60px;
+    text-shadow: 4px 4px 4px #000;
+    margin-left: 16px;
+    display: inline-block;
+}
+
+footer div#relogioApagado {
+    position: relative;
+    font: normal 40px display;
+    color: #0001;
+    margin: 6px 16px 0 0;
+    float: right;
+}
+
+footer div#relogioDigital {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font: normal 40px display;
+    color: #EEE;
+    text-shadow: 2px 2px 4px #000;
+}
+
+
+/*Relógio*/
+
+section#relogio {
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.9);
+    background-color: #9F9F9F;
+    border-radius: 50%;
+    box-shadow: 0 0 8px 4px #0009, 0 0 60px 2px #04F4, inset 0 0 120px 2px rgba(0, 60, 255, 0.2), inset 0 0 60px 4px #4448, inset 0 0 2px 0.4px rgb(0, 89, 255);
+    border: 8px solid #556;
+    z-index: -1;
+}
+
+section div#centro {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-color: rgb(8, 88, 163);
+    box-shadow: 0 0 80px 20px rgba(0, 53, 102, 0.4);
+    width: 24px;
+    height: 24px;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    border: 6px solid #334;
+    box-sizing: border-box;
+    z-index: 1;
+}
+
+section div#am-pm {
+    position: absolute;
+    top: 425px;
+    left: 300px;
+    transform: translate(-50%, -50%);
+    font: bold 40px Arial;
+    color: #222;
+}
+
+section div.base {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(0deg);
+}
+
+div.ponteiro {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -100%);
+}
+
+div#hora {
+    width: 8px;
+    height: 200px;
+    background: rgba(11, 88, 133, 0.8);
+    box-shadow: 0 0 8px 2px rgba(29, 92, 151, 0.6);
+    border-radius: 4px;
+}
+
+div#minuto {
+    width: 6px;
+    height: 240px;
+    background: rgba(4, 50, 136, 0.8);
+    box-shadow: 0 0 8px 2px rgba(27, 78, 173, 0.6);
+    border-radius: 3px;
+}
+
+div.segundo {
+    width: 4px;
+    height: 280px;
+    background: rgba(18, 18, 116, 0.8);
+    box-shadow: 0 0 8px 2px rgba(40, 40, 161, 0.6);
+    border-radius: 2px;
+}
+
+
+/*Numeros*/
+
+div#numeros > div {
+    position: absolute;
+    font-weight: bolder;
+    font-family: serif;
+    color: #111;
+    text-shadow: 2px 2px 4px #222;
+}
+
+div#n1 {
+    right: 27.5%;
+    top: 11.03%;
+    transform: translate(50%, -50%);
+    font-size: 42px;
+}
+div#n2 {
+    right: 11.03%;
+    top: 27.5%;
+    transform: translate(50%, -50%);
+    font-size: 42px;
+}
+div#n3 {
+    right: 5%;
+    top: 50%;
+    transform: translate(50%, -50%);
+    font-size: 56px;
+}
+div#n4 {
+    right: 11.03%;
+    bottom: 27.5%;
+    transform: translate(50%, 50%);
+    font-size: 42px;
+}
+div#n5 {
+    right: 27.5%;
+    bottom: 11.03%;
+    transform: translate(50%, 50%);
+    font-size: 42px;
+}
+div#n6 {
+    bottom: 5%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    font-size: 56px;
+}
+div#n7 {
+    left: 27.5%;
+    bottom: 11.03%;
+    transform: translate(-50%, 50%);
+    font-size: 42px;
+}
+div#n8 {
+    left: 11.03%;
+    bottom: 27.5%;
+    transform: translate(-50%, 50%);
+    font-size: 42px;
+}
+div#n9 {
+    left: 5%; 
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 56px;
+}
+div#n10 {
+    left: 11.03%;
+    top: 27.5%;
+    transform: translate(-50%, -50%);
+    font-size: 42px;
+}
+div#n11 {
+    left: 27.5%;
+    top: 11.03%;
+    transform: translate(-50%, -50%);
+    font-size: 42px;
+}
+div#n12 {
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 56px;
+}
+
+
+/*botao*/
+
+input#botao {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 80px;
+    height: 40px;
+    -webkit-appearance: none;
+    margin: 0;
+    background-color: #EEE;
+    border-radius: 20px;
+    box-shadow: inset 2px 2px 15px rgba(0,0,0,.2), 2px 2px 5px rgba(0,0,0,.2);
+    outline: none;
+    transition: .4s;
+    cursor: pointer;
+}
+
+input#botao::after {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    top: 0;
+    left: 0;
+    border-radius: 20px;
+    transform: scale(1.05);
+    transition: .4s;
+    position: relative;
+    box-shadow: 0 0 5px rgba(0,0,0,.2);
+}
+
+input#botao:checked {
+    background-color: #9CF;
+    box-shadow: inset 2px 2px 15px rgba(0,0,0,.2), 0 0 8px 2px rgba(96, 188, 204, 0.5);
+}
+
+input#botao:checked::after {
+    left: 40px;
+    background-color: #EEE;
+}
